@@ -12,6 +12,7 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final counterData = ref.watch(counter);
     final counterData2 = ref.watch(counter2);
+    final counterData3 = ref.watch(counter3);
 
     // Listen the changes
     ref.listen(
@@ -45,7 +46,7 @@ class HomePage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              '$counterData2',
+              '$counterData3',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
@@ -56,11 +57,13 @@ class HomePage extends ConsumerWidget {
         onPressed: () {
           // ref.read(counter2.notifier).state++;
           //or
-          ref.read(counter2.notifier).update((state) {
-            return state + 1;
-          });
+          // ref.read(counter2.notifier).update((state) {
+          //   return state + 1;
+          // });
           // or
           //ref.read(counter2.notifier).update((state) => state + 1);
+          // To access all the functions if using
+          ref.read(counter3.notifier).incrementCounter();
         },
       ),
     );
