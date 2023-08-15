@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,6 +12,16 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final counterData = ref.watch(counter);
     final counterData2 = ref.watch(counter2);
+
+    // Listen the changes
+    ref.listen(
+      counter2,
+      (previous, next) {
+        log('Previous: $previous');
+        log('Next: $next');
+      },
+    );
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
