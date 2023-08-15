@@ -79,7 +79,7 @@ class HomePage extends ConsumerWidget {
             ),
 ```
 
-# On StateFulWidget
+## On StateFulWidget
 
 `class HomePage3 extends ConsumerStatefulWidget {`
 
