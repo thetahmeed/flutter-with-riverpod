@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'ui/home/home_page3.dart';
+import 'package:flutter_with_riverpod/ui/home/home_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -10,6 +9,11 @@ void main() {
 // Provider is used to access immutable objects
 final counter = Provider<int>((ref) {
   return 99;
+});
+
+// StateProvider is used to access simple mutable object
+final counter2 = StateProvider<int>((ref) {
+  return 100;
 });
 
 class MyApp extends StatelessWidget {
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage3(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
