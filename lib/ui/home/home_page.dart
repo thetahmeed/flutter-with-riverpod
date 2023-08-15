@@ -19,6 +19,8 @@ class HomePage extends ConsumerWidget {
             onPressed: () {
               // To reset the sate
               ref.invalidate(counter2);
+              // or
+              ref.refresh(counter2);
             },
             icon: const Icon(
               Icons.restore_rounded,
