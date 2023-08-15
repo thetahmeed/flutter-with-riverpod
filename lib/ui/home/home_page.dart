@@ -29,7 +29,13 @@ class HomePage extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_rounded),
         onPressed: () {
-          ref.read(counter2.notifier).state++;
+          // ref.read(counter2.notifier).state++;
+          //or
+          ref.read(counter2.notifier).update((state) {
+            return state + 1;
+          });
+          // or
+          //ref.read(counter2.notifier).update((state) => state + 1);
         },
       ),
     );
