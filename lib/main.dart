@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'ui/home/home_page2.dart';
+
+import 'ui/home/home_page3.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage2(),
+      home: const HomePage3(),
       debugShowCheckedModeBanner: false,
     );
   }
