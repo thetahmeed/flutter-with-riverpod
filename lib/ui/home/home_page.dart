@@ -14,6 +14,17 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Roverpod!'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // To reset the sate
+              ref.invalidate(counter2);
+            },
+            icon: const Icon(
+              Icons.restore_rounded,
+            ),
+          )
+        ],
       ),
       body: Center(
         child: Column(
