@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../main.dart';
@@ -10,6 +12,15 @@ class HomePage3 extends ConsumerStatefulWidget {
 }
 
 class _HomePage3State extends ConsumerState<HomePage3> {
+  @override
+  void initState() {
+    // Here we used 'read' not 'watch'
+    final counterData = ref.read(counter);
+
+    log(counterData.toString());
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final counterData = ref.watch(counter);
