@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'ui/home/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
+
+// Provider is used to access immutable objects
+final counter = Provider<int>((ref) {
+  return 99;
+});
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'Roverpod!'),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
