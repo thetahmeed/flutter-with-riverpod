@@ -1,4 +1,34 @@
-# flutter-with-riverpod
+# flutter-with-riverpod (UPDATED)
+
+## Setup
+
+1. Add these
+
+```
+flutter pub add flutter_riverpod
+flutter pub add riverpod_annotation
+flutter pub add dev:riverpod_generator
+flutter pub add dev:build_runner
+flutter pub add dev:custom_lint
+flutter pub add dev:riverpod_lint
+```
+
+2. Run code generator
+
+```
+dart run build_runner watch
+```
+
+3. Enable lint
+  Open `analysis_options.yaml` and add 
+
+```
+analyzer:
+  plugins:
+    - custom_lint
+```
+
+# flutter-with-riverpod (OLD 2.3.6)
 
 ## Setup
 
