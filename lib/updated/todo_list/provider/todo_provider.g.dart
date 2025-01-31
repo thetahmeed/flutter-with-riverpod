@@ -7,7 +7,7 @@ part of 'todo_provider.dart';
 // **************************************************************************
 
 String _$todoProviderNotifierHash() =>
-    r'e5a0f041f65317e6c4763ef152e912ff5dbf4be9';
+    r'6e74d93582a83513bcc01279bf0a9221b3925f0f';
 
 /// See also [TodoProviderNotifier].
 @ProviderFor(TodoProviderNotifier)
