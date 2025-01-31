@@ -27,4 +27,8 @@ class TodoProviderNotifier extends _$TodoProviderNotifier {
       TodoModel(description: 'Buy bread', completed: false),
     ];
   }
+
+  Future<void> addTodo() async {
+    // Todo
+  }
 }
