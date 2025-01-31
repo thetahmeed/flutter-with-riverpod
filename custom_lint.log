@@ -307,3 +307,45 @@ at:
 [ConvertToStatefulBaseWidget] 2025-01-30T23:32:52.849126 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
 [ConvertToStatefulBaseWidget] 2025-01-30T23:32:52.849126 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
 [ConvertToStatefulBaseWidget] 2025-01-30T23:32:52.849126
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 Plugin WrapWithConsumer threw while analyzing /Users/tahmeed/Developer/Projects/flutter/flutter-with-riverpod/lib/updated/network_request/network_request_page.dart:
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-01-31T19:15:07.425601
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:59:7)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:158:5)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-01-31T19:15:07.425601
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 Plugin WrapWithProviderScope threw while analyzing /Users/tahmeed/Developer/Projects/flutter/flutter-with-riverpod/lib/updated/network_request/network_request_page.dart:
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:59:7)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:158:5)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-01-31T19:15:07.434400
