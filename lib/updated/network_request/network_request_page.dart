@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_with_riverpod/updated/network_request/model/activity.dart';
@@ -10,12 +9,23 @@ class NetworkRequestPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<Activity> activity = ref.watch(activityProvider('1'));
+    final id = ref.watch(idNotifierProvider);
+    final AsyncValue<Activity> activity = ref.watch(activityProvider(id));
 
     return Scaffold(
       body: Center(
         child: activity.when(
-          data: (value) => Text(value.title),
+          data: (value) => Padding(
+            padding: const EdgeInsets.all(28.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(value.id.toString()),
+                Text(value.title),
+                Text(value.completed.toString()),
+              ],
+            ),
+          ),
           loading: () => const CircularProgressIndicator(),
           error: (error, stackTrace) {
             log(error.toString());
@@ -25,7 +35,8 @@ class NetworkRequestPage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //
+          //ref.read(idNotifierProvider.notifier).increment();
+          ref.read(idNotifierProvider.notifier).getId(2);
         },
         child: const Icon(Icons.refresh),
       ),
