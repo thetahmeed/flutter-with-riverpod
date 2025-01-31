@@ -6,7 +6,7 @@ part of 'provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$activityHash() => r'47939600afb7bf4b7818a66c34908d84476ab39e';
+String _$activityHash() => r'80279bd276b963588d90f9957be33b55cb901843';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -40,7 +40,7 @@ class ActivityFamily extends Family<AsyncValue<Activity>> {
 
   /// See also [activity].
   ActivityProvider call(
-    String id,
+    int id,
   ) {
     return ActivityProvider(
       id,
@@ -75,7 +75,7 @@ class ActivityFamily extends Family<AsyncValue<Activity>> {
 class ActivityProvider extends AutoDisposeFutureProvider<Activity> {
   /// See also [activity].
   ActivityProvider(
-    String id,
+    int id,
   ) : this._internal(
           (ref) => activity(
             ref as ActivityRef,
@@ -102,7 +102,7 @@ class ActivityProvider extends AutoDisposeFutureProvider<Activity> {
     required this.id,
   }) : super.internal();
 
-  final String id;
+  final int id;
 
   @override
   Override overrideWith(
@@ -145,7 +145,7 @@ class ActivityProvider extends AutoDisposeFutureProvider<Activity> {
 // ignore: unused_element
 mixin ActivityRef on AutoDisposeFutureProviderRef<Activity> {
   /// The parameter `id` of this provider.
-  String get id;
+  int get id;
 }
 
 class _ActivityProviderElement
@@ -153,7 +153,23 @@ class _ActivityProviderElement
   _ActivityProviderElement(super.provider);
 
   @override
-  String get id => (origin as ActivityProvider).id;
+  int get id => (origin as ActivityProvider).id;
 }
+
+String _$idNotifierHash() => r'beb5ce64a556bc864c7aa7eb640c792b1097743c';
+
+/// See also [IdNotifier].
+@ProviderFor(IdNotifier)
+final idNotifierProvider =
+    AutoDisposeNotifierProvider<IdNotifier, int>.internal(
+  IdNotifier.new,
+  name: r'idNotifierProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$idNotifierHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$IdNotifier = AutoDisposeNotifier<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
