@@ -1,8 +1,6 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../main.dart';
 
 class HomePage extends ConsumerWidget {
@@ -10,8 +8,8 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final counterData = ref.watch(counter);
-    final counterData2 = ref.watch(counter2);
+    // final counterData = ref.watch(counter);
+    // final counterData2 = ref.watch(counter2);
     final counterData3 = ref.watch(counter3);
 
     // Listen the changes
@@ -33,7 +31,7 @@ class HomePage extends ConsumerWidget {
               // To reset the sate
               ref.invalidate(counter2);
               // or
-              ref.refresh(counter2);
+              // ref.refresh(counter2);
             },
             icon: const Icon(
               Icons.restore_rounded,
