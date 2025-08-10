@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_with_riverpod/main.dart';
+import 'package:flutter_with_riverpod/main_old.dart';
 
 class HomePage2 extends StatelessWidget {
   const HomePage2({super.key});
