@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'updated2/simple_provider/simple_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  // 0. Wrap the app with ProviderScope
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
