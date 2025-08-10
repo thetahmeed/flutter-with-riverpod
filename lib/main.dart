@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'updated2/simple_provider/simple_provider.dart';
+
+import 'updated2/state_provider/state_provider.dart';
 
 void main() {
   // 0. Wrap the app with ProviderScope
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter with Riverpod',
-      home: SimpleProviderScreen(),
+      // home: SimpleProviderScreen(),
+      home: StateProviderScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
