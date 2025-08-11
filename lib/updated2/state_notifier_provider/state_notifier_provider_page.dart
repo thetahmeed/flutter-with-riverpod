@@ -38,6 +38,7 @@ class MyStates {
   }
 }
 
+// View
 class StateNotifierProviderPage extends ConsumerWidget {
   const StateNotifierProviderPage({super.key});
 

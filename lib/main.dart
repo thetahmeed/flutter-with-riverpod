@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_with_riverpod/updated2/state_notifier_provider/state_notifier_provider_page.dart';
-
-import 'updated2/state_provider/state_provider.dart';
+import 'package:flutter_with_riverpod/updated2/state_notifier_provider/state_notifier_provider_page2.dart';
 
 void main() {
   // 0. Wrap the app with ProviderScope
@@ -18,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter with Riverpod',
       // home: SimpleProviderScreen(),
       // home: StateProviderScreen(),
-      home: StateNotifierProviderPage(),
+      // home: StateNotifierProviderPage(),
+      home: StateNotifierProviderPage2(),
       debugShowCheckedModeBanner: false,
     );
   }
