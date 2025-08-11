@@ -96,7 +96,8 @@ final stateProvider = StateProvider<int>((ref) => 0);
 
 final mySwitch = StateProvider<bool>((ref) => false);
 
-class StateProviderScreen extends ConsumerWidget {
+// The Switch Practice
+/*class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({super.key});
 
   @override
@@ -118,6 +119,51 @@ class StateProviderScreen extends ConsumerWidget {
                 );
               },
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+*/
+
+final sliderStateProvider = StateProvider<double>((ref) => 0.2);
+
+class StateProviderScreen extends ConsumerWidget {
+  const StateProviderScreen({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    print('Updating build');
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Consumer(builder: (context, ref, child) {
+              final sliderValue = ref.watch(sliderStateProvider);
+              print('Updating container');
+              return Opacity(
+                opacity: sliderValue,
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  color: Colors.red,
+                ),
+              );
+            }),
+            const SizedBox(height: 10),
+            Consumer(builder: (context, ref, child) {
+              final sliderValue = ref.watch(sliderStateProvider);
+              print('Updating slider');
+              return Slider(
+                value: sliderValue,
+                onChanged: (val) {
+                  ref.watch(sliderStateProvider.notifier).state = val;
+                },
+              );
+            }),
           ],
         ),
       ),
