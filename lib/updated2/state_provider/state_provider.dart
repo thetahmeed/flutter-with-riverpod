@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -129,7 +130,9 @@ final mySwitch = StateProvider<bool>((ref) => false);
 
 final sliderStateProvider = StateProvider<double>((ref) => 0.2);
 
-class StateProviderScreen extends ConsumerWidget {
+// The Slider Practice
+
+/*class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({super.key});
 
   @override
@@ -167,6 +170,79 @@ class StateProviderScreen extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+}
+*/
+
+// Multiple Small States
+final multipleStates = StateProvider<MultipleSmallStates>(
+    (ref) => MultipleSmallStates(isActive: false, isChecked: false));
+
+class StateProviderScreen extends StatelessWidget {
+  const StateProviderScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    print('Build');
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Consumer(
+              builder: (context, ref, child) {
+                final states =
+                    ref.watch(multipleStates.select((state) => state.isActive));
+                print('Switch');
+
+                return Switch.adaptive(
+                    value: states,
+                    onChanged: (val) {
+                      final active = ref.read(multipleStates.notifier);
+                      active.state = active.state.copyWith(isActive: val);
+                    });
+              },
+            ),
+            const SizedBox(height: 10),
+            Consumer(
+              builder: (context, ref, child) {
+                final states = ref
+                    .watch(multipleStates.select((state) => state.isChecked));
+                print("Checkbox");
+                return Checkbox.adaptive(
+                    value: states,
+                    onChanged: (val) {
+                      final checkbox = ref.read(multipleStates.notifier);
+
+                      checkbox.state = checkbox.state.copyWith(isChecked: val);
+                    });
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MultipleSmallStates {
+  final bool isActive;
+  final bool isChecked;
+
+  MultipleSmallStates({
+    required this.isActive,
+    required this.isChecked,
+  });
+
+  MultipleSmallStates copyWith({
+    bool? isActive,
+    bool? isChecked,
+  }) {
+    return MultipleSmallStates(
+      isActive: isActive ?? this.isActive,
+      isChecked: isChecked ?? this.isChecked,
     );
   }
 }

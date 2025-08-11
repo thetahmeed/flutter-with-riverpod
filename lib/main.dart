@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_with_riverpod/updated2/state_notifier_provider/state_notifier_provider_page.dart';
 
 import 'updated2/state_provider/state_provider.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter with Riverpod',
       // home: SimpleProviderScreen(),
-      home: StateProviderScreen(),
+      // home: StateProviderScreen(),
+      home: StateNotifierProviderPage(),
       debugShowCheckedModeBanner: false,
     );
   }
