@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_with_riverpod/updated2/future_provider/future_provider_page.dart';
+import 'package:flutter_with_riverpod/updated2/future_provider/prac1-get/future_provider_get_page.dart';
 import 'package:flutter_with_riverpod/updated2/stream_provider/stream_provider_page.dart';
 import 'updated2/state_notifier_provider/state_notifier_provider3/state_notifier_provider_page3.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       // home: StateNotifierProviderPage(),
       // home: StateNotifierProviderPage3(),
       // home: FutureProviderPage(),
-      home: StreamProviderPage(),
+      home: FutureProviderGetPage(),
+      // home: StreamProviderPage(),
       debugShowCheckedModeBanner: false,
     );
   }
