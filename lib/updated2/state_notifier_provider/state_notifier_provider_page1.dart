@@ -39,8 +39,8 @@ class MyStates {
 }
 
 // View
-class StateNotifierProviderPage extends ConsumerWidget {
-  const StateNotifierProviderPage({super.key});
+class StateNotifierProviderPage1 extends ConsumerWidget {
+  const StateNotifierProviderPage1({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
